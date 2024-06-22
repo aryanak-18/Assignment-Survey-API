@@ -15,7 +15,6 @@ router.get("/:topic", async (req, res) => {
   try {
     const questions = await Question.find({ topic });
     res.status(200).json({data: questions});
-    // console.log(questions);
   } catch (error) {
     res.status(500).json({ error: "Server error" });
   }
